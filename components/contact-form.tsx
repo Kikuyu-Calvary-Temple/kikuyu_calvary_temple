@@ -16,10 +16,6 @@ const topics = [
   "Counselling / pastoral care",
 ]
 
-/**
- * No backend yet — the form opens the visitor's email app with the message
- * pre-filled. Swap `handleSubmit` for an API route / form service when ready.
- */
 export function ContactForm() {
   const [sent, setSent] = useState(false)
 

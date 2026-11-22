@@ -1,36 +1,27 @@
-/**
- * Central site content. Update contact details, times and programs here and
- * every page picks up the change.
- *
- * NOTE: Values marked "TODO: confirm" are placeholders — please verify them
- * with the church office before publishing.
- */
-
 export const site = {
   name: "Calvary Temple Kikuyu",
   shortName: "Calvary Temple",
-  affiliation: "Gospel Evangelistic Church of Kenya (G.E.C.K)", // TODO: confirm full name
+  affiliation: "Gospel Evangelistic Church of Kenya (G.E.C.K)",
   tagline: "A ministry of peace and reconciliation",
-  /** Short summary shown in the top bar — TODO: confirm */
   serviceSummary: "Sundays 8:00 AM · Wednesdays 5:30 PM",
   description:
     "Calvary Temple Kikuyu is a Spirit-filled family of believers in Kikuyu, Kiambu County — a ministry of peace and reconciliation, loving God and serving our community.",
   address: {
-    line1: "Kikuyu Town", // TODO: confirm street / landmark
+    line1: "Kikuyu Town",
     line2: "Kikuyu, Kiambu County, Kenya",
   },
   mapQuery: "Calvary Temple Kikuyu, Kikuyu, Kenya",
   mapLink:
     "https://www.google.com/maps/search/?api=1&query=Calvary+Temple+Kikuyu",
-  phone: "+254 700 000 000", // TODO: confirm
-  email: "info@calvarytemplekikuyu.org", // TODO: confirm
+  phone: "+254 721 481 132",
+  email: "kikuyucalvarytemple@gmail.com",
   mpesa: {
-    paybill: "000000", // TODO: confirm
-    account: "Tithe / Offering",
+    paybill: "247247",
+    account: "496658",
   },
   socials: {
     facebook: "https://www.facebook.com/calvarytemplekikuyu/",
-    youtube: "", // TODO: add channel URL if available
+    youtube: "https://www.youtube.com/@CalvaryTempleKikuyu",
   },
 } as const
 
@@ -42,11 +33,11 @@ export const nav = [
   { href: "/contact", label: "Contact" },
 ] as const
 
-/** Sunday gatherings — TODO: confirm times */
 export const sundayServices = [
   { name: "Morning Devotion", time: "8:00 – 9:00 AM" },
-  { name: "First Service", time: "9:00 – 10:30 AM" },
-  { name: "Celebration Service", time: "10:30 AM – 1:00 PM" },
+  { name: "Bible Study Service", time: "9:00 – 10:30 AM" },
+  { name: "Praise and Worship", time: "10:30 AM – 11:30 AM" },
+  { name: "Main Service", time: "11:30 AM – 1:00 PM" },
 ] as const
 
 export type Program = {
@@ -57,7 +48,6 @@ export type Program = {
   midweek?: boolean
 }
 
-/** Weekly rhythm — TODO: confirm days and times */
 export const weeklyPrograms: Program[] = [
   {
     day: "Sunday",
@@ -68,21 +58,21 @@ export const weeklyPrograms: Program[] = [
   },
   {
     day: "Sunday",
-    name: "First Service",
+    name: "Bible Study",
     time: "9:00 – 10:30 AM",
     description:
       "A focused service of praise, the Word and prayer for the whole family.",
   },
   {
     day: "Sunday",
-    name: "Celebration Service",
-    time: "10:30 AM – 1:00 PM",
+    name: "Praise and Worship",
+    time: "10:30 AM – 11:30 AM",
     description:
       "Our main gathering — vibrant worship, powerful preaching and fellowship.",
   },
   {
     day: "Sunday",
-    name: "Sunday School",
+    name: "Main Service",
     time: "10:30 AM – 1:00 PM",
     description:
       "Age-appropriate Bible lessons, songs and activities for children.",
@@ -105,19 +95,12 @@ export const weeklyPrograms: Program[] = [
   },
   {
     day: "Friday",
-    name: "Overnight / Kesha",
-    time: "Last Friday · 9:00 PM",
+    name: "Fellowship",
+    time: "Last Friday · 6:00 PM",
     description:
-      "A night of worship, prayer and the Word — every last Friday of the month.",
+      "Meet and fellowship with fellow believers in close home cells.",
     midweek: true,
-  },
-  {
-    day: "Saturday",
-    name: "Youth Fellowship",
-    time: "2:00 – 5:00 PM",
-    description:
-      "Young people growing in faith, friendship and purpose through the Word and worship.",
-  },
+  }
 ]
 
 export const ministries = [
